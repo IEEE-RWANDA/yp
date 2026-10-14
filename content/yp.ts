@@ -11,11 +11,6 @@ const content: SiteContent = {
   id: "yp",
   shortName: "IEEE Rwanda YP",
   fullName: "IEEE Rwanda Young Professionals Affinity Group",
-  wordmark: {
-    lineTop: "IEEE Rwanda",
-    lineMain: "Young Professionals",
-    lineSub: "Affinity Group",
-  },
   identifierLabel: "RWANDA",
 
   headerTitle: ["IEEE Rwanda", "Young Professionals", "Affinity Group"],
@@ -26,52 +21,24 @@ const content: SiteContent = {
 
   // Colours from the IEEE Young Professionals Identity Guidelines: IEEE Blue,
   // green #00843D ("youth and growth") and orange #E87722 — the colours of the YP logo.
-  colors: { brand: "#00629B", accent: "#00843D", onAccent: "#FFFFFF", accent2: "#E87722", surface: "#E6EFF5" },
+  colors: { brand: "#00629B", accent: "#00843D", surface: "#E6EFF5" },
 
-  slides: [
-    {
-      image: "/yp/hero/students-laptop.jpg",
-      alt: "A group of young professionals working together around a laptop",
-      title: "From graduate to leader.",
-      subtitle: "IEEE Rwanda Young Professionals Affinity Group",
-      cta: { label: "Join Young Professionals", href: "/get-involved/" },
-      credit: { name: "Vitaly Gariev / Unsplash", url: "https://unsplash.com/photos/8gAbl776pc0" },
-      focus: "center 30%",
-    },
-    {
-      image: "/yp/hero/speaker-audience.jpg",
-      alt: "A speaker on stage in front of a large audience",
-      title: "Industry and policy panels.",
-      subtitle: "Hear from practitioners, investors and regulators",
-      cta: { label: "See our events", href: "/events/" },
-      credit: { name: "Alexandre Pellaes / Unsplash", url: "https://unsplash.com/photos/6vAjp0pscX0" },
-    },
-    {
-      image: "/yp/hero/kigali-hilltop.jpg",
-      alt: "Kigali neighbourhoods seen from a hilltop",
-      title: "Built in Kigali, connected worldwide.",
-      subtitle: "Part of a global network of 400,000+ IEEE members",
-      cta: { label: "Follow us on LinkedIn", href: "https://www.linkedin.com/showcase/ieee-young-professionals-rwanda/" },
-      credit: { name: "Xavier Praillet / Unsplash", url: "https://unsplash.com/photos/VikU8k-XJ54" },
-    },
-  ],
-
+  // The photo, headline and button at the top of the home page.
   hero: {
-    eyebrow: "IEEE Rwanda Subsection · Region 8",
-    title: "From graduate to leader — grow your career with IEEE.",
-    subtitle:
-      "IEEE Young Professionals Rwanda is the community for engineers and technologists in the first fifteen years of their careers: people building companies, products and infrastructure across the country.",
-    highlights: ["Career development", "Networking", "Industry panels", "Leadership"],
-    primary: { label: "Join Young Professionals", href: "/get-involved/" },
-    secondary: { label: "See upcoming events", href: "/events/" },
+    image: "/yp/hero/students-laptop.jpg",
+    alt: "A group of young professionals working together around a laptop",
+    title: "From graduate to leader.",
+    cta: { label: "Join Young Professionals", href: "/get-involved/" },
+    credit: { name: "Vitaly Gariev / Unsplash", url: "https://unsplash.com/photos/8gAbl776pc0" },
+    focus: "center 30%",
   },
 
-  stats: [
-    { value: "15", label: "Years after your first degree — that's YP" },
-    { value: "2026", label: "Year the Subsection launched" },
-    { value: "400k+", label: "IEEE members worldwide" },
-    { value: "Free", label: "YP is included in IEEE membership" },
-  ],
+  // Shown beside "About us" on the home page. Remove to show the text on its own.
+  aboutPhoto: {
+    image: "/yp/hero/speaker-audience.jpg",
+    alt: "A speaker on stage in front of a large audience",
+    credit: { name: "Alexandre Pellaes / Unsplash", url: "https://unsplash.com/photos/6vAjp0pscX0" },
+  },
 
   about: {
     heading: "About IEEE Rwanda Young Professionals",
@@ -105,14 +72,13 @@ const content: SiteContent = {
   ],
 
   focus: {
-    eyebrow: "What we focus on",
     heading: "Built for the first fifteen years of your career",
     intro: "Our programme is organised around four themes. Every event we run serves at least one of them.",
     cards: [
-      { tag: "01", title: "Career growth", description: "Workshops, CV clinics and talks that help you land, keep and grow in great engineering jobs." },
-      { tag: "02", title: "Industry & policy", description: "Panels connecting YPs with industry, investors and regulators on the issues shaping Rwanda's tech sector." },
-      { tag: "03", title: "Entrepreneurship", description: "Stories, tools and contacts for engineers who want to build their own start-ups." },
-      { tag: "04", title: "Leadership", description: "Real volunteer roles running events, teams and budgets inside IEEE Rwanda." },
+      { title: "Career growth", description: "Workshops, CV clinics and talks that help you land, keep and grow in great engineering jobs." },
+      { title: "Industry & policy", description: "Panels connecting YPs with industry, investors and regulators on the issues shaping Rwanda's tech sector." },
+      { title: "Entrepreneurship", description: "Stories, tools and contacts for engineers who want to build their own start-ups." },
+      { title: "Leadership", description: "Real volunteer roles running events, teams and budgets inside IEEE Rwanda." },
     ],
   },
 

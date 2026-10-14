@@ -23,8 +23,8 @@ export default async function ExtraPage({ params }: { params: Promise<{ slug: st
       {page.slug === "societies" && site.bodies ? (
         <BodiesSection />
       ) : (
-        <Container className="py-16">
-          <div className="grid gap-6 md:grid-cols-2">
+        <Container className="py-14">
+          <div className="grid gap-x-10 gap-y-12 md:grid-cols-2">
             {page.cards.map((c) => <InfoCard key={c.title} card={c} />)}
           </div>
         </Container>

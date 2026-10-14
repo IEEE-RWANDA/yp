@@ -15,12 +15,11 @@ Split out of the original three-site codebase [akabway-cmu/ieee-rwanda-unit-site
 Based on the IEEE Brand Experience *Global Page Elements and Branding Requirements*:
 
 - ✅ IEEE meta navigation at the very top (IEEE.org | IEEE *Xplore*® | IEEE Standards | IEEE Spectrum | More Sites — Join IEEE | Donate), Open Sans, underline on hover
-- ✅ Site identifier top-left as a text wordmark containing "IEEE", linking home
+- ✅ Site identifier top-left (the official unit logo, which contains "IEEE"), linking home
 - ✅ IEEE Master Brand slot top-right, linking to ieee.org with alt text "IEEE" (**you must add the official file — see step 4**)
 - ✅ Required footer links: Home, Contact, Accessibility, Nondiscrimination Policy, IEEE Ethics Reporting, IEEE Privacy Policy, Terms & Disclosures, Sitemap
 - ✅ Required copyright line + descriptor; the year updates automatically
 - ✅ IEEE colour palette (IEEE Blue `#00629B` + one accent per unit), full-width footer visually separated
-- ✅ Alert/announcement bar on the home page (`alert` in the content file)
 - ✅ Accessibility: skip link, keyboard focus outlines, alt text, works on phones, respects "reduce motion"
 - ✅ Search-engine basics: page titles, descriptions, sitemap.xml, robots.txt, Organization structured data
 
@@ -71,22 +70,22 @@ Rules of thumb:
 | Site | Main | Accent(s) | Source |
 |---|---|---|---|
 | All | IEEE Blue `#00629B`, Dark Blue `#002855` | — | IEEE Color Guide 03/2025 |
-| Joint Chapter | IEEE Blue | PES green `#78BE20`, grey background `#E6E7E8` | IEEE PES Identity Guidelines |
-| YP | IEEE Blue | green `#00843D`, orange `#E87722` | IEEE YP Identity Guidelines |
-| SIGHT | IEEE Blue | SIGHT red `#BA0C2F`, orange `#E87722` | IEEE HT / SIGHT Identity Guidelines |
+| Joint Chapter | IEEE Blue | PES green `#78BE20`, grey tint `#E6E7E8` | IEEE PES Identity Guidelines |
+| YP | IEEE Blue | green `#00843D` | IEEE YP Identity Guidelines |
+| SIGHT | IEEE Blue | SIGHT red `#BA0C2F` | IEEE HT / SIGHT Identity Guidelines |
 
-Buttons and links are always IEEE Blue (or white on blue), as in the IEEE website templates; accents only appear as thin rules, badges and bullets. Headings and text use Open Sans, the IEEE web font.
+Buttons and links are always IEEE Blue (white on photos), as in the IEEE website templates. The accent only marks the active menu item, the "Next event" band and keyboard focus. Text uses Open Sans, the IEEE web font; page titles use its condensed cut.
 
-**Layout:** the sites follow the IEEE website template used by IEEE PES chapters on IEEE Region sites (e.g. the IEEE PES/PELS/IAS Hyderabad Section Joint Chapter): light IEEE link bar → logos + unit name + search + IEEE logo → full-width coloured menu → full-width photo slider → key-number tiles → centred "About / What We Do" card → events → society/focus section → team → footer. The template colour is `colors.brand` in each content file (IEEE Blue now). For a green look like the Hyderabad chapter, set it to IEEE Green `#00843D` — PES's bright green `#78BE20` is too light for white menu text.
+**Layout:** IEEE link bar → logo, unit name, search and IEEE logo → menu bar → photo with headline → the next event → about → focus areas (or the societies, for the joint chapter) → recent events → leadership → how to get involved → footer. The menu colour is `colors.brand` (IEEE Blue). For a green look, set it to IEEE Green `#00843D` — PES's bright green `#78BE20` is too light for white menu text.
 
-**Home-page photos** (`slides` in each content file, files in `public/<unit>/hero/`):
-- The current photos are free stock photos (Unsplash License — free to use, credit shown on each slide). The Kigali skylines are real Kigali photos; the others are generic.
+**Home-page photos** (`hero` and `aboutPhoto` in the content file, files in `public/<unit>/hero/`):
+- The current photos are free stock photos (Unsplash License — free to use, credit shown under each photo). The Kigali skylines are real Kigali photos; the others are generic.
 - IEEE prefers **your own photos** of real IEEE Rwanda activities. Replace them as soon as you have good ones — landscape, at least 1920 px wide, people doing something, sharp and bright, with consent from the people shown. Good shots to collect:
   - Joint Chapter: members at a substation, solar plant or battery-swap station visit; a Distinguished Lecturer talk; students around power-electronics hardware in a lab.
   - YP: a panel discussion on stage; networking at an event; a group photo with the YP banner; a mentoring session.
   - SIGHT: volunteers with a community partner; a solar or water installation you helped deliver; a school STEM outreach session.
 - The IEEE Rwanda Subsection launch album (Flickr) has photos you can use for all three sites — download the best ones and drop them in.
-- To swap a photo: copy it into `public/<unit>/hero/`, then change `image`, `alt` and `credit` for that slide.
+- To swap a photo: copy it into `public/<unit>/hero/`, then change `image`, `alt` and `credit` in `hero` or `aboutPhoto`.
 
 **Shared content** (the Subsection launch event, IEEE tool links, links to sister units in the footer) lives in `content/shared.ts`.
 
@@ -98,11 +97,11 @@ Every push to `main` deploys the site to production on Vercel automatically (`.g
 
 - [ ] All `placeholder: true` entries replaced (sample events, sample project)
 - [ ] `CHANGE-ME@ieee.org` replaced with a real unit email (ask for an @ieee.org alias)
-- [ ] LinkedIn page created for each unit and linked in `social.linkedin` and `alert` (the Subsection's funding rules require an active website **and** LinkedIn page)
+- [ ] LinkedIn page created and linked in `social.linkedin` (the Subsection's funding rules require an active website **and** LinkedIn page)
 - [ ] IEEE favicon added
 - [ ] SIGHT identifier approved by IEEE HT (htb-office@ieee.org)
 - [ ] Officer photos added (with each person's permission)
-- [ ] Check facts in the stats strip and text
+- [ ] Check the facts in the text
 - [ ] Site registered with IEEE: https://brand-experience.ieee.org/guidelines/digital/site-registration-form/
 - [ ] Optional but recommended: request an IEEE Experience Design review of the beta URL (https://brand-experience.ieee.org/contact/exd-contact-form/)
 - [ ] Ask the Web Administrator about the IEEE cookie banner (needed if you add analytics or embeds that set cookies; this site sets none by default)

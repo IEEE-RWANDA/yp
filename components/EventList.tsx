@@ -13,6 +13,7 @@ type Props = {
   buildDate: string;
   limit?: number;
   emptyText?: string;
+  /** Leave out the summary (home page). */
   compact?: boolean;
 };
 
@@ -24,43 +25,41 @@ export function splitEvents(events: EventItem[], today: string) {
   return { upcoming, past };
 }
 
-function EventCard({ e, isPast, compact }: { e: EventItem; isPast: boolean; compact?: boolean }) {
+function EventRow({ e, isPast, compact }: { e: EventItem; isPast: boolean; compact?: boolean }) {
   const d = formatDate(e.date);
   return (
-    <article className={`flex gap-5 rounded-lg border bg-white p-5 shadow-sm ${e.placeholder ? "border-dashed border-ieee-orange" : "border-slate-200"}`}>
-      <div className={`flex w-20 shrink-0 flex-col items-center justify-center self-start rounded-md py-3 text-center ${isPast ? "bg-slate-100 text-slate-600" : "bg-ieee-blue text-white"}`}>
+    <li className="grid gap-x-8 gap-y-2 py-6 sm:grid-cols-[7rem_1fr]">
+      <p className="text-ieee-navy">
         {d ? (
           <>
-            <span className="font-condensed text-4xl font-bold leading-none">{d.day}</span>
-            <span className="mt-1 text-xs font-bold uppercase tracking-wider">{d.month}</span>
-            <span className="text-xs opacity-80">{d.year}</span>
+            <span className="block text-3xl font-bold leading-none">{d.day}</span>
+            <span className="text-sm font-semibold">{d.month} {d.year}</span>
           </>
         ) : (
-          <span className="px-1 text-xs font-bold uppercase leading-tight">Date<br />TBA</span>
+          <span className="text-sm font-semibold">Date to be announced</span>
         )}
-      </div>
-      <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="rounded bg-surface px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-ieee-blue">{e.type}</span>
-          {!isPast && <span className="rounded bg-accent px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-on-accent">Upcoming</span>}
-          {e.placeholder && <PlaceholderBadge />}
-        </div>
-        <h3 className="mt-2 font-condensed text-xl font-bold text-brand">{e.title}</h3>
-        <p className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-sm text-slate-500">
+      </p>
+      <div className="min-w-0">
+        {e.placeholder && <div className="mb-2"><PlaceholderBadge /></div>}
+        <p className="text-sm font-semibold text-muted">{e.type}</p>
+        <h3 className="mt-0.5 text-lg font-bold leading-snug text-ieee-navy">{e.title}</h3>
+        <p className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted">
           {e.time && <span className="inline-flex items-center gap-1"><Clock />{e.time}</span>}
           <span className="inline-flex items-center gap-1"><Pin />{e.location}</span>
+          {e.organiser && <span>Organised by {e.organiser}</span>}
         </p>
-        {e.organiser && <p className="mt-1 text-sm text-slate-500">Organised by {e.organiser}</p>}
-        {!compact && <p className="mt-3 leading-relaxed text-slate-600">{e.summary}</p>}
-        <div className="mt-3 flex flex-wrap gap-4 text-sm font-bold">
-          {!isPast && e.registerUrl && (
-            <a href={e.registerUrl} className="inline-flex items-center gap-1 rounded bg-ieee-blue px-3 py-1.5 text-white hover:bg-ieee-navy">Register <External /></a>
-          )}
-          {e.photosUrl && <a href={e.photosUrl} className="inline-flex items-center gap-1 text-ieee-blue hover:underline">Photos <External /></a>}
-          {e.reportUrl && <a href={e.reportUrl} className="inline-flex items-center gap-1 text-ieee-blue hover:underline">Event report <External /></a>}
-        </div>
+        {!compact && <p className="mt-3 max-w-3xl leading-relaxed text-ink">{e.summary}</p>}
+        {((!isPast && e.registerUrl) || e.photosUrl || e.reportUrl) && (
+          <div className="mt-3 flex flex-wrap gap-5 text-sm font-semibold">
+            {!isPast && e.registerUrl && (
+              <a href={e.registerUrl} className="inline-flex items-center gap-1.5 rounded-sm bg-brand px-3 py-1.5 text-white hover:bg-ieee-navy">Register <External /></a>
+            )}
+            {e.photosUrl && <a href={e.photosUrl} className="inline-flex items-center gap-1.5 text-brand hover:underline">Photos <External /></a>}
+            {e.reportUrl && <a href={e.reportUrl} className="inline-flex items-center gap-1.5 text-brand hover:underline">Event report <External /></a>}
+          </div>
+        )}
       </div>
-    </article>
+    </li>
   );
 }
 
@@ -72,13 +71,13 @@ export default function EventList({ events, show, buildDate, limit, emptyText, c
   const list = (show === "upcoming" ? upcoming : past).slice(0, limit);
 
   if (list.length === 0) {
-    return <p className="rounded-lg border border-dashed border-slate-300 p-6 text-slate-500">{emptyText ?? "Nothing here yet."}</p>;
+    return <p className="border-y border-rule py-6 text-muted">{emptyText ?? "Nothing here yet."}</p>;
   }
   return (
-    <div className="grid gap-5">
+    <ul className="divide-y divide-rule border-y border-rule">
       {list.map((e) => (
-        <EventCard key={`${e.title}-${e.date ?? "tba"}`} e={e} isPast={show === "past"} compact={compact} />
+        <EventRow key={`${e.title}-${e.date ?? "tba"}`} e={e} isPast={show === "past"} compact={compact} />
       ))}
-    </div>
+    </ul>
   );
 }

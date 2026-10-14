@@ -20,6 +20,17 @@ export type Officer = {
   placeholder?: boolean;
 };
 
+export type Photo = {
+  /** Path inside /public, e.g. "/yp/hero/students-laptop.jpg". Landscape, at least 1600 px wide. */
+  image: string;
+  /** Describe the photo for screen readers. */
+  alt: string;
+  /** Photographer credit, e.g. { name: "Jane Doe / Unsplash", url: "https://unsplash.com/photos/..." } */
+  credit?: { name: string; url?: string };
+  /** Which part of the photo to keep in view when cropped (CSS object-position). */
+  focus?: string;
+};
+
 export type EventItem = {
   title: string;
   /** "YYYY-MM-DD". Leave out if the date is not fixed yet (shown as "Date TBA"). */
@@ -57,8 +68,6 @@ export type SiteContent = {
   shortName: string;
   /** Official full name of the unit. */
   fullName: string;
-  /** The site identifier (top-left). IEEE rules: the letters IEEE must be in it. */
-  wordmark: { lineTop: string; lineMain: string; lineSub?: string };
   /** Text shown with the official unit logo (e.g. "RWANDA" under the YP logo). */
   identifierLabel: string;
   /** The unit name printed beside the logos in the header, one entry per line
@@ -69,57 +78,31 @@ export type SiteContent = {
   description: string;
   /** Final address of the website, e.g. https://yp.ieeerwanda.org */
   siteUrl: string;
-  /** IEEE vTools / OU code if you have it, e.g. "R80XXXX" — shown in the footer. */
-  ouCode?: string;
 
   /**
    * Colours. Every site uses IEEE Blue (#00629B) as the main colour and IEEE
-   * Dark Blue (#002855) for the top bar and footer, like the IEEE website
-   * templates. Each unit adds the accent colour(s) from ITS OWN official brand
-   * guideline — never more than two (IEEE rule).
+   * Dark Blue (#002855) for headings and the footer. Each unit adds one accent
+   * colour from ITS OWN official brand guideline.
    */
   colors: {
-    /** Template colour: meta-nav text, header title, menu bar, headings and footer.
-     *  IEEE Blue (#00629B) by default. */
+    /** Template colour: meta-nav text, menu bar, buttons and links. IEEE Blue (#00629B) by default. */
     brand: string;
-    /** Main accent — thin rules, active menu underline, badges, bullets. */
+    /** Unit accent — used sparingly: active menu underline, the "Next event" marker, keyboard focus. */
     accent: string;
-    /** Text colour that passes WCAG AA contrast ON the accent colour. */
-    onAccent: string;
-    /** Optional second accent from the same guideline (used sparingly). */
-    accent2?: string;
-    /** Background for alternating light sections (a ≥10% tint, per IEEE). */
+    /** Light tint for the few highlighted bands (a ≥10% tint, per IEEE). */
     surface: string;
   };
 
-  /** Emergency / announcement bar at the very top of the home page. Remove to hide. */
-  alert?: { message: string; link?: Link };
-
-  /** Full-width photo slider at the top of the home page (IEEE template style).
+  /** The photo, headline and button at the top of the home page.
    *  Photos live in /public/<unit>/hero/. Use your own event photos whenever you can. */
-  slides: {
-    image: string;
-    /** Describe the photo for screen readers. */
-    alt: string;
+  hero: Photo & {
     title: string;
     subtitle?: string;
     cta?: Link;
-    /** Photographer credit, e.g. { name: "Jane Doe / Unsplash", url: "https://unsplash.com/photos/..." } */
-    credit?: { name: string; url?: string };
-    /** Which part of the photo to keep in view when cropped (CSS object-position). */
-    focus?: string;
-  }[];
-
-  hero: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    highlights: string[];
-    primary: Link;
-    secondary: Link;
   };
 
-  stats: { value: string; label: string }[];
+  /** Optional second photo, shown beside "About us" on the home page. */
+  aboutPhoto?: Photo;
 
   about: {
     heading: string;
@@ -134,12 +117,11 @@ export type SiteContent = {
   /** "What we do" bullet list (home + about). */
   whatWeDo: string[];
 
-  /** Cards in the home page focus section (societies, programmes or focus areas). */
-  focus: { eyebrow: string; heading: string; intro: string; cards: Card[] };
+  /** The home page focus section (programmes or focus areas). */
+  focus: { heading: string; intro: string; cards: Card[] };
 
   /** Optional "About IEEE and our societies" cards (joint chapter): what each body is, with a Join button and a link to its website. */
   bodies?: {
-    eyebrow: string;
     heading: string;
     intro?: string;
     items: { name: string; question: string; description: string; logo: string; join: Link; home: string }[];

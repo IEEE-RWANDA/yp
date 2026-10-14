@@ -1,39 +1,33 @@
 @import "tailwindcss";
 
 /* IEEE colour palette — IEEE Brand Identity Guidelines, Color Guide (03/2025).
-   IEEE Blue is the main colour on every site, IEEE Dark Blue for the top bar
-   and footer. Each unit's accent comes from its own sub-brand guideline and
-   is set in its content file (colors: { ... }). */
+   IEEE Blue for links, buttons and the menu bar; IEEE Dark Blue for headings
+   and the footer. Each unit's accent comes from its own sub-brand guideline
+   and is set in its content file (colors: { ... }). */
 @theme {
   --color-ieee-blue: #00629b;
   --color-ieee-navy: #002855;
-  --color-ieee-blue-75: #477ca7;
-  --color-ieee-blue-25: #bac6d9;
   --color-ieee-orange: #e87722;
   --color-ieee-gray: #75787b;
   --color-ieee-light: #e6eff5; /* 10% IEEE Blue tint (lowest tint IEEE allows) */
 
+  --color-ink: #1d2733;
+  --color-muted: #566270;
+  --color-rule: #d5dde5;
+
   --color-brand: var(--brand);
   --color-brand-tint: var(--brand-tint);
   --color-accent: var(--accent);
-  --color-accent2: var(--accent2);
-  --color-on-accent: var(--on-accent);
   --color-surface: var(--surface);
 
-  /* Open Sans is the IEEE web font (PES and IEEE HT guidelines). */
+  /* Open Sans is the IEEE web font. The condensed cut is kept for page titles only. */
   --font-sans: "Open Sans", Calibri, Verdana, system-ui, sans-serif;
-  --font-display: "Open Sans", Calibri, Verdana, system-ui, sans-serif;
-  /* Open Sans Condensed — headings and menu in the IEEE website templates. */
   --font-condensed: "Open Sans Condensed", "Open Sans", Calibri, sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   background: #ffffff;
-  color: #1f2a37;
+  color: var(--color-ink);
 }
 
 /* Visible keyboard focus (IEEE accessibility requirement) */
@@ -42,21 +36,8 @@ body {
   outline-offset: 2px;
 }
 
-/* IEEE Blue banner with a subtle circuit texture and an IEEE "wedge"
-   (the Master Brand design element, used at the approved 135° angle). */
-.circuit-bg {
-  background-color: var(--brand);
-  background-image:
-    linear-gradient(135deg, transparent 72%, rgb(0 40 85 / 0.55) 72%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.07' stroke-width='1.5'%3E%3Cpath d='M0 30h40l10 10h30M120 90H80l-10-10H40M30 0v20l10 10M90 120v-20l-10-10'/%3E%3Ccircle cx='80' cy='40' r='3'/%3E%3Ccircle cx='40' cy='80' r='3'/%3E%3C/g%3E%3C/svg%3E");
-}
-
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   * {
     transition: none !important;
-    animation: none !important;
   }
 }

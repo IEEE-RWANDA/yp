@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@fontsource/open-sans/400.css";
 import "@fontsource/open-sans/600.css";
 import "@fontsource/open-sans/700.css";
-import "@fontsource/open-sans/800.css";
 import "@fontsource/open-sans/400-italic.css";
 import "@fontsource/open-sans-condensed/700.css";
 import "./globals.css";
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary", title: site.fullName, description: site.description },
 };
 
-// Structured data so search engines understand who we are (like the "SEO Structured Data" WordPress plugin).
+// Structured data so search engines understand who we are.
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -38,8 +37,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ["--brand" as string]: site.colors.brand,
         ["--brand-tint" as string]: `color-mix(in srgb, ${site.colors.brand} 10%, white)`,
         ["--accent" as string]: site.colors.accent,
-        ["--accent2" as string]: site.colors.accent2 ?? site.colors.accent,
-        ["--on-accent" as string]: site.colors.onAccent,
         ["--surface" as string]: site.colors.surface,
       }}
     >

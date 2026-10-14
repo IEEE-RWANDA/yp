@@ -26,21 +26,21 @@ export default function SiteSearch({ entries }: { entries: Entry[] }) {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           autoFocus
-          className="w-full rounded border-2 border-slate-300 px-4 py-3 text-lg focus:border-brand focus:outline-none"
+          className="w-full rounded-sm border border-rule px-4 py-3 text-lg focus:border-brand focus:outline-none"
         />
-        <button type="submit" className="rounded bg-brand px-6 font-condensed text-lg font-bold uppercase text-white">Search</button>
+        <button type="submit" className="rounded-sm bg-brand px-6 font-semibold text-white hover:bg-ieee-navy">Search</button>
       </form>
-      {q && <p className="mt-4 text-sm text-slate-500">{results.length} result{results.length === 1 ? "" : "s"}</p>}
-      <ul className="mt-4 divide-y divide-slate-200">
+      {q && <p className="mt-4 text-sm text-muted">{results.length} result{results.length === 1 ? "" : "s"}</p>}
+      <ul className="mt-4 divide-y divide-rule">
         {results.map((r, i) => (
           <li key={`${r.href}-${i}`} className="py-4">
-            <span className="text-xs font-bold uppercase tracking-wide text-ieee-gray">{r.kind}</span>
+            <span className="text-sm font-semibold text-muted">{r.kind}</span>
             {isExternal(r.href) ? (
-              <a href={r.href} className="block font-condensed text-xl font-bold text-brand hover:underline">{r.title}</a>
+              <a href={r.href} className="block text-lg font-bold text-ieee-navy hover:underline">{r.title}</a>
             ) : (
-              <Link href={r.href} className="block font-condensed text-xl font-bold text-brand hover:underline">{r.title}</Link>
+              <Link href={r.href} className="block text-lg font-bold text-ieee-navy hover:underline">{r.title}</Link>
             )}
-            <p className="mt-1 line-clamp-2 text-slate-600">{r.text}</p>
+            <p className="mt-1 line-clamp-2 text-ink">{r.text}</p>
           </li>
         ))}
       </ul>

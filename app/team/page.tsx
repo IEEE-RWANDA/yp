@@ -8,12 +8,12 @@ export default function Team() {
   const groups = [...new Set(site.officers.map((o) => o.group))];
   return (
     <>
-      <PageBanner title="Team" intro="The volunteers who lead and run the group. Officers serve on a volunteer basis for one-year terms." />
-      <Container className="space-y-16 py-16">
+      <PageBanner title="Team" intro={`The volunteers who lead ${site.shortName}. Officers serve one-year terms.`} />
+      <Container className="space-y-14 py-14">
         {groups.map((g) => (
           <section key={g}>
             <SectionHeading title={g} />
-            <div className="mt-8 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+            <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {site.officers.filter((o) => o.group === g).map((o, i) => <OfficerCard key={`${o.role}-${i}`} person={o} />)}
             </div>
           </section>

@@ -78,23 +78,3 @@ export const Search = ({ className = "h-5 w-5" }: P) => (
     <path d="m15.5 15.5 5 5" strokeLinecap="round" />
   </svg>
 );
-export const ChevronLeft = ({ className = "h-8 w-8" }: P) => (
-  <svg className={`${base} ${className}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} aria-hidden="true">
-    <path d="m15 5-7 7 7 7" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-export const ChevronRight = ({ className = "h-8 w-8" }: P) => (
-  <svg className={`${base} ${className}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} aria-hidden="true">
-    <path d="m9 5 7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-export const Pause = ({ className = "h-4 w-4" }: P) => (
-  <svg className={`${base} ${className}`} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" />
-  </svg>
-);
-export const Play = ({ className = "h-4 w-4" }: P) => (
-  <svg className={`${base} ${className}`} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M7 4v16l13-8z" />
-  </svg>
-);
