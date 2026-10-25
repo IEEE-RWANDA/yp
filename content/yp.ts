@@ -43,9 +43,9 @@ const content: SiteContent = {
 
   // Shown beside "About us" on the home page. Remove to show the text on its own.
   aboutPhoto: {
-    image: "/yp/hero/speaker-audience.jpg",
-    alt: "A speaker on stage in front of a large audience",
-    credit: { name: "Alexandre Pellaes / Unsplash", url: "https://unsplash.com/photos/6vAjp0pscX0" },
+    image: "/yp/about-team.jpg",
+    alt: "A diverse team of young professionals around a table with wind-turbine models, discussing a project",
+    focus: "center 35%",
   },
 
   about: {
