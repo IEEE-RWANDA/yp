@@ -154,6 +154,14 @@ const content: SiteContent = {
       summary: "Students, engineers, researchers and young professionals met women who have walked the paths they are navigating, for honest conversations about careers, leadership, mentorship and setbacks. A panel with Uwase Vestine, Dr Victoire (Vicky) Ghafi Kondi-Akara and Furaha Benedict, a Women in Engineering awareness session led by Kayesu Ritah, and an IEEE session led by Rhoda Ojetola, Chair of IEEE WIE at CMU-Africa.",
     },
     {
+      title: "Industrial Visit: Volkswagen Mobility Solutions Rwanda",
+      date: "2026-07-24",
+      location: "Volkswagen Mobility Solutions Rwanda, Kigali",
+      type: "Industrial Visit",
+      organiser: "IEEE IES Rwanda Chapter, in collaboration with IEEE Rwanda Young Professionals",
+      summary: "Students from the University of Rwanda, African Leadership University and Carnegie Mellon University Africa toured Volkswagen's Kigali assembly plant. They learned how vehicles are assembled, the different parts of a car, and the range of careers at Volkswagen, from engineering to marketing and sales, and how each role fits together until a car rolls off the line.",
+    },
+    {
       title: "Rwanda Simulation Synergy",
       date: "2026-05-22",
       time: "09:00",
