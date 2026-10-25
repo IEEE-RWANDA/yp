@@ -101,6 +101,9 @@ export type SiteContent = {
     cta?: Link;
   };
 
+  /** Optional announcement shown under the home page photo. Remove it to hide the box. */
+  announcement?: { label: string; title: string; text: string; link?: Link };
+
   /** Optional second photo, shown beside "About us" on the home page. */
   aboutPhoto?: Photo;
 

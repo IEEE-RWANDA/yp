@@ -24,6 +24,13 @@ const content: SiteContent = {
   colors: { brand: "#00629B", accent: "#00843D", surface: "#E6EFF5" },
 
   // The photo, headline and button at the top of the home page.
+  announcement: {
+    label: "Announcement",
+    title: "Kigali will host the IEEE Region 8 ASYP Congress 2027",
+    text: "IEEE Region 8 has chosen Kigali, Rwanda to host the 2027 Africa Students and Young Professionals Congress (ASYP). Students and young professionals from across Africa will meet for leadership, technical and networking sessions. Dates and registration will be announced soon.",
+    link: { label: "Follow us on LinkedIn for updates", href: "https://www.linkedin.com/showcase/ieee-young-professionals-rwanda/" },
+  },
+
   hero: {
     image: "/yp/hero/students-laptop.jpg",
     alt: "A group of young professionals working together around a laptop",
@@ -143,7 +150,7 @@ const content: SiteContent = {
       location: "Carnegie Mellon University Africa, Kigali",
       type: "Industry Workshop",
       organiser: "IEEE CMU-Africa IAS/PELS/PES Joint Student Branch Chapter",
-      summary: "A workshop on numerical simulation and smart electrical systems. 43 participants from 12 nationalities joined technical talks, a panel, a student showcase and a live Ansys Discovery demo, and 12 new IEEE IAS student members signed up. Partners included Ansys, Ampersand Energy, SLS Energy, TRL Space and Neotix Robotics.",
+      summary: "An industry networking workshop on numerical simulation and smart electrical systems, held with Ansys and the IEEE Industry Applications Society. 43 participants from 12 nationalities explored how digital modelling and smart technologies solve real engineering problems, through technical talks, a panel, a student showcase and a live Ansys Discovery demo. For many it was their first time using professional simulation software, and 12 joined IEEE IAS as student members.",
     },
     {
       title: "IEEE Young Professionals: Benefits and Opportunities",

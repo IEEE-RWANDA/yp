@@ -3,6 +3,7 @@ import { site } from "@/content";
 import { todayKigali } from "@/lib/dates";
 import EventList from "@/components/EventList";
 import Hero from "@/components/Hero";
+import Announcement from "@/components/Announcement";
 import NextEvent from "@/components/NextEvent";
 import { BodiesSection } from "@/components/Sections";
 import { ButtonLink, Container, InfoCard, OfficerCard, SectionHeading, TextLink } from "@/components/ui";
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Announcement />
       <NextEvent buildDate={buildDate} />
 
       <section>
