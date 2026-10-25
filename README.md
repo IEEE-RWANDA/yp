@@ -44,7 +44,7 @@ Open `content/yp.ts` (or the other two). It reads like a form:
 
 ```ts
 officers: [
-  { group: "Executive Committee", name: "Akabway Rurangwa", role: "Chair", affiliation: "SLS Energy Ltd" },
+  { group: "Executive Committee", name: "Akabway Rurangwa", role: "Chair" },
   { group: "Executive Committee", name: "Name Surname", role: "Vice Chair", affiliation: "Organisation", placeholder: true },
 ```
 

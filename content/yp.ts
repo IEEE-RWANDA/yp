@@ -127,7 +127,7 @@ const content: SiteContent = {
   },
 
   officers: [
-    { group: "Executive Committee", name: "Akabway Rurangwa", role: "Chair", affiliation: "SLS Energy Ltd" },
+    { group: "Executive Committee", name: "Akabway Rurangwa", role: "Chair" },
     { group: "Executive Committee", name: "Adonijah Ogara", role: "Vice Chair" },
     { group: "Executive Committee", name: "Furaha Benedict", role: "Secretary" },
     { group: "Executive Committee", name: "Kayesu Ritah", role: "Treasurer" },
