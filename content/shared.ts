@@ -27,7 +27,7 @@ export const SUBSECTION_EVENTS: EventItem[] = [
     type: "Community",
     organiser: "IEEE Rwanda Subsection",
     summary:
-      "The official activation of Rwanda's IEEE geographic unit, bringing together engineers, students, faculty, industry and government for the launch ceremony, society workshops, humanitarian-technology discussions and student-leadership sessions.",
+      "The official launch of the IEEE Rwanda Subsection, bringing together engineers, students, industry and government for the launch ceremony, society workshops and student leadership sessions.",
     photosUrl: "https://flic.kr/s/aHBqjCZwSB",
   },
 ];
