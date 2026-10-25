@@ -11,7 +11,7 @@ function buildIndex(): Entry[] {
   const e: Entry[] = [
     { title: "About", text: [site.about.mission, site.about.vision, ...site.about.intro].join(" "), href: "/about/", kind: "Page" },
     { title: "Get involved", text: [site.getInvolved.intro, ...site.getInvolved.benefits].join(" "), href: "/get-involved/", kind: "Page" },
-    { title: "Contact", text: `${site.contact.email} ${site.contact.address}`, href: "/contact/", kind: "Page" },
+    { title: "Contact", text: `${site.contact.email ?? "LinkedIn"} ${site.contact.address}`, href: "/contact/", kind: "Page" },
   ];
   if (site.extraPage) {
     e.push({ title: site.extraPage.title, text: site.extraPage.intro, href: `/${site.extraPage.slug}/`, kind: "Page" });

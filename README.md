@@ -51,7 +51,7 @@ officers: [
 Rules of thumb:
 - Change only the text **inside the quotes**. Keep the commas and brackets.
 - Anything with `placeholder: true` shows an orange "Placeholder — replace before launch" label. Replace the text and **delete** `placeholder: true`.
-- Search each file for `CHANGE-ME` and replace it (the contact email).
+- There is no unit email yet, so the site points visitors to the LinkedIn page. When you get one (ask for an @ieee.org alias), remove the `//` in front of the `email:` line under `contact` and type the address.
 - If you break something, the browser shows a red error naming the line — usually a missing comma or quote.
 
 **Adding an event:** copy an existing `{ ... },` block inside `events: [ ]` and edit it. Dates are written `"2026-11-20"`. Leave `date` out if it isn't fixed yet (shows "Date TBA"). Events move from *Upcoming* to *Past* automatically once the date passes. Put the IEEE vTools link in `registerUrl`, and after the event add `photosUrl` / `reportUrl`.
@@ -96,7 +96,7 @@ Every push to `main` deploys the site to production on Vercel automatically (`.g
 ## 5. Launch checklist
 
 - [ ] All `placeholder: true` entries replaced (sample events, sample project)
-- [ ] `CHANGE-ME@ieee.org` replaced with a real unit email (ask for an @ieee.org alias)
+- [ ] Optional: add a unit email (ask for an @ieee.org alias); until then visitors are sent to LinkedIn
 - [ ] LinkedIn page created and linked in `social.linkedin` (the Subsection's funding rules require an active website **and** LinkedIn page)
 - [ ] IEEE favicon added
 - [ ] SIGHT identifier approved by IEEE HT (htb-office@ieee.org)

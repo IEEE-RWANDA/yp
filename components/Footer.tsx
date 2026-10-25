@@ -58,7 +58,12 @@ export default function Footer() {
         <div>
           <h2 className="text-sm font-bold text-white">Contact</h2>
           <ul className="mt-4 space-y-3 text-sm">
-            <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4" /><a href={`mailto:${site.contact.email}`} className="break-all hover:text-white hover:underline">{site.contact.email}</a></li>
+            {site.contact.email && (
+              <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4" /><a href={`mailto:${site.contact.email}`} className="break-all hover:text-white hover:underline">{site.contact.email}</a></li>
+            )}
+            {site.social.linkedin && (
+              <li className="flex items-start gap-2"><LinkedIn className="mt-0.5 h-4 w-4" /><a href={site.social.linkedin} className="hover:text-white hover:underline">Message us on LinkedIn</a></li>
+            )}
             <li className="flex items-start gap-2"><Pin className="mt-0.5 h-4 w-4" />{site.contact.address}</li>
           </ul>
         </div>

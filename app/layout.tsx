@@ -23,7 +23,7 @@ const jsonLd = {
   "@type": "Organization",
   name: site.fullName,
   url: site.siteUrl,
-  email: site.contact.email,
+  ...(site.contact.email ? { email: site.contact.email } : {}),
   description: site.description,
   parentOrganization: { "@type": "Organization", name: "IEEE Rwanda Subsection", url: "https://www.ieeerwanda.org" },
   sameAs: Object.values(site.social).filter(Boolean),

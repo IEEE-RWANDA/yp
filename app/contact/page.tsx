@@ -12,8 +12,16 @@ export default function Contact() {
       <Container className="py-14">
         <dl className="grid gap-8 border-t border-rule pt-8 sm:grid-cols-3">
           <div>
-            <dt className="font-bold text-ieee-navy">Email</dt>
-            <dd className="mt-1"><a href={`mailto:${c.email}`} className="break-all text-brand hover:underline">{c.email}</a></dd>
+            <dt className="font-bold text-ieee-navy">{c.email ? "Email" : "Send us a message"}</dt>
+            <dd className="mt-1">
+              {c.email ? (
+                <a href={`mailto:${c.email}`} className="break-all text-brand hover:underline">{c.email}</a>
+              ) : site.social.linkedin ? (
+                <a href={site.social.linkedin} className="text-brand hover:underline">Message us on LinkedIn</a>
+              ) : (
+                <span className="text-ink">Speak to any of our officers at our next event.</span>
+              )}
+            </dd>
           </div>
           <div>
             <dt className="font-bold text-ieee-navy">Location</dt>

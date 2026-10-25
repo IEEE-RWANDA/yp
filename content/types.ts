@@ -152,7 +152,9 @@ export type SiteContent = {
   partners: { name: string; url?: string; logo?: string }[];
 
   contact: {
-    email: string;
+    /** Unit email (e.g. an @ieee.org alias). Leave out until you have one;
+     *  the site then points visitors to the LinkedIn page instead. */
+    email?: string;
     address: string;
     /** Google Form or similar, opened in a new tab. Optional. */
     formUrl?: string;

@@ -174,7 +174,7 @@ const content: SiteContent = {
   ],
 
   contact: {
-    email: "CHANGE-ME@ieee.org",
+    // email: "unit-name@ieee.org",   <- add the unit email here when you have one
     address: "Kigali, Rwanda",
   },
 
