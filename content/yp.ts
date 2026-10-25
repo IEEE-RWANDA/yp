@@ -44,8 +44,9 @@ const content: SiteContent = {
   // Shown beside "About us" on the home page. Remove to show the text on its own.
   aboutPhoto: {
     image: "/yp/about-team.jpg",
-    alt: "A large group of young women and men from different backgrounds at a meeting around a long conference table",
-    credit: { name: "Christina Morillo / Pexels", url: "https://www.pexels.com/photo/group-of-people-on-a-conference-room-1181406/" },
+    alt: "Four young professionals, women and men, working together at computers around a shared desk",
+    credit: { name: "Jep Gambardella / Pexels", url: "https://www.pexels.com/photo/people-working-in-the-office-7689856/" },
+    focus: "center 60%",
   },
 
   about: {
