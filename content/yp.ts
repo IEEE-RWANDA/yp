@@ -128,10 +128,10 @@ const content: SiteContent = {
   },
 
   officers: [
-    { group: "Executive Committee", name: "Akabway Rurangwa", role: "Chair" },
-    { group: "Executive Committee", name: "Adonijah Ogara", role: "Vice Chair" },
-    { group: "Executive Committee", name: "Furaha Benedict", role: "Secretary" },
-    { group: "Executive Committee", name: "Kayesu Ritah", role: "Treasurer" },
+    { group: "Executive Committee", name: "Akabway Rurangwa", role: "Chair", photo: "/yp/team/akabway-rurangwa.jpg" },
+    { group: "Executive Committee", name: "Adonijah Ogara", role: "Vice Chair", photo: "/yp/team/adonijah-ogara.jpg" },
+    { group: "Executive Committee", name: "Furaha Benedict", role: "Secretary", photo: "/yp/team/furaha-benedict.jpg" },
+    { group: "Executive Committee", name: "Kayesu Ritah", role: "Treasurer", photo: "/yp/team/kayesu-ritah.jpg" },
   ],
 
   events: [

@@ -101,9 +101,9 @@ export function OfficerCard({ person }: { person: Officer }) {
     <article className="flex items-start gap-4">
       {person.photo ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={person.photo} alt="" className="h-16 w-16 shrink-0 rounded-full object-cover" />
+        <img src={person.photo} alt="" className="h-20 w-20 shrink-0 rounded-full object-cover" />
       ) : (
-        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-surface text-lg font-semibold text-ieee-navy" aria-hidden="true">
+        <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-surface text-lg font-semibold text-ieee-navy" aria-hidden="true">
           {initials(person.name)}
         </span>
       )}
