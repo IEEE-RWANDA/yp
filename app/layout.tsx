@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: { default: site.fullName, template: `%s | ${site.shortName}` },
   description: site.description,
   openGraph: { title: site.fullName, description: site.description, url: site.siteUrl, siteName: site.fullName, type: "website", locale: "en_US" },
-  twitter: { card: "summary", title: site.fullName, description: site.description },
+  twitter: { card: "summary_large_image", title: site.fullName, description: site.description },
 };
 
 // Structured data so search engines understand who we are.
