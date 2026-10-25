@@ -43,9 +43,9 @@ const content: SiteContent = {
 
   // Shown beside "About us" on the home page. Remove to show the text on its own.
   aboutPhoto: {
-    image: "/yp/about-meeting.jpg",
-    alt: "Young professionals in a meeting around a conference table",
-    credit: { name: "Ninthgrid / Pexels", url: "https://www.pexels.com/photo/business-meeting-in-lagos-office-setting-30688596/" },
+    image: "/yp/about-conference.jpg",
+    alt: "A young professional speaking into a microphone during a conference, with other participants at tables behind her",
+    credit: { name: "Safi Erneste / Pexels", url: "https://www.pexels.com/photo/a-woman-speaking-at-a-conference-21335291/" },
   },
 
   about: {
