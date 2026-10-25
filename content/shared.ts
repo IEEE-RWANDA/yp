@@ -23,7 +23,7 @@ export const SUBSECTION_EVENTS: EventItem[] = [
   {
     title: "IEEE Rwanda Subsection Launch & Societies Engagement Forum",
     date: "2026-07-17",
-    location: "CMU-Africa, Kigali Innovation City",
+    location: "Digital Transformation Center Rwanda, Kigali",
     type: "Community",
     organiser: "IEEE Rwanda Subsection",
     summary:

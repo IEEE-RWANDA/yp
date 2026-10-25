@@ -146,6 +146,14 @@ const content: SiteContent = {
       registerUrl: "https://lnkd.in/dfx5kXuR",
     },
     {
+      title: "Women in STEM Leadership and Career Development Forum",
+      date: "2026-08-28",
+      location: "Carnegie Mellon University Africa, Kigali",
+      type: "Forum",
+      organiser: "IEEE Women in Engineering Affinity Group at CMU-Africa, funded by IEEE Young Professionals",
+      summary: "Students, engineers, researchers and young professionals met women who have walked the paths they are navigating, for honest conversations about careers, leadership, mentorship and setbacks. A panel with Uwase Vestine, Dr Victoire (Vicky) Ghafi Kondi-Akara and Furaha Benedict, a Women in Engineering awareness session led by Kayesu Ritah, and an IEEE session led by Rhoda Ojetola, Chair of IEEE WIE at CMU-Africa.",
+    },
+    {
       title: "Rwanda Simulation Synergy",
       date: "2026-05-22",
       time: "09:00",
