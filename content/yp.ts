@@ -43,9 +43,9 @@ const content: SiteContent = {
 
   // Shown beside "About us" on the home page. Remove to show the text on its own.
   aboutPhoto: {
-    image: "/yp/about-team.jpg",
-    alt: "A diverse team of young professionals around a table with wind-turbine models, discussing a project",
-    focus: "center 35%",
+    image: "/yp/about-meeting.jpg",
+    alt: "Young professionals in a meeting around a conference table",
+    credit: { name: "Ninthgrid / Pexels", url: "https://www.pexels.com/photo/business-meeting-in-lagos-office-setting-30688596/" },
   },
 
   about: {
