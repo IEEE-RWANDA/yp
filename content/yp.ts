@@ -29,6 +29,7 @@ const content: SiteContent = {
     title: "Kigali will host the IEEE Region 8 ASYP Congress 2027",
     text: "IEEE Region 8 has chosen Kigali, Rwanda to host the 2027 Africa Students and Young Professionals Congress (ASYP). Students and young professionals from across Africa will meet for leadership, technical and networking sessions. Dates and registration will be announced soon.",
     link: { label: "Follow us on LinkedIn for updates", href: "https://www.linkedin.com/showcase/ieee-young-professionals-rwanda/" },
+    image: { src: "/yp/asyp-2027-hosts.jpg", alt: "IEEE Region 8 announcement of the 2027 Cross-Sectional SYP hosts: ASYP Kigali, Rwanda; MENASYP Cairo, Egypt; NCESYP Glasgow, UK & Ireland; SESYP Athens, Greece" },
   },
 
   hero: {

@@ -12,6 +12,7 @@ export default function Announcement() {
   return (
     <section aria-label={a.label} className="border-b border-rule bg-white">
       <Container className="py-8">
+        <div className={a.image ? "grid gap-6 md:grid-cols-[1fr_minmax(0,24rem)] md:items-center md:gap-10" : ""}>
         <div className="border-l-4 border-accent pl-5">
           <p className="text-sm font-bold uppercase tracking-wider text-ieee-navy">{a.label}</p>
           <h2 className="mt-1 text-xl font-bold text-ieee-navy sm:text-2xl">{a.title}</h2>
@@ -19,6 +20,11 @@ export default function Announcement() {
           {a.link && (isExternal(a.link.href)
             ? <a href={a.link.href} className={cls}>{a.link.label} <External /></a>
             : <Link href={a.link.href} className={cls}>{a.link.label} <ArrowRight /></Link>)}
+        </div>
+        {a.image && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={a.image.src} alt={a.image.alt} className="w-full rounded border border-rule shadow-sm" />
+        )}
         </div>
       </Container>
     </section>

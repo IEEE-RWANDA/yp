@@ -102,7 +102,7 @@ export type SiteContent = {
   };
 
   /** Optional announcement shown under the home page photo. Remove it to hide the box. */
-  announcement?: { label: string; title: string; text: string; link?: Link };
+  announcement?: { label: string; title: string; text: string; link?: Link; image?: { src: string; alt: string } };
 
   /** Optional second photo, shown beside "About us" on the home page. */
   aboutPhoto?: Photo;
