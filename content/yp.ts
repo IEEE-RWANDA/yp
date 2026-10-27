@@ -154,6 +154,15 @@ const content: SiteContent = {
       summary: "Students, engineers, researchers and young professionals met women who have walked the paths they are navigating, for honest conversations about careers, leadership, mentorship and setbacks. A panel with Uwase Vestine, Dr Victoire (Vicky) Ghafi Kondi-Akara and Furaha Benedict, a Women in Engineering awareness session led by Kayesu Ritah, and an IEEE session led by Rhoda Ojetola, Chair of IEEE WIE at CMU-Africa.",
     },
     {
+      title: "IEEE ComSoc Rwanda & Partner IEEE Societies Meet & Greet at ALU",
+      date: "2026-08-08",
+      time: "13:00–16:00",
+      location: "African Leadership University, Kigali Innovation City, Bumbogo",
+      type: "Meet & Greet",
+      organiser: "IEEE ComSoc Rwanda Chapter, in collaboration with IEEE Rwanda Young Professionals",
+      summary: "African Leadership University students met IEEE volunteers to learn about IEEE opportunities and the steps toward an IEEE Student Branch and a Communications Society student chapter at ALU. The YP Chair presented \"IEEE at a Glance\", and sessions covered membership, student leadership, technical communities and how to form and sustain new IEEE units.",
+    },
+    {
       title: "Industrial Visit: Volkswagen Mobility Solutions Rwanda",
       date: "2026-07-24",
       location: "Volkswagen Mobility Solutions Rwanda, Kigali",
