@@ -142,8 +142,7 @@ const content: SiteContent = {
       location: "Digital Transformation Center Rwanda, Kigali",
       type: "Panel Discussion",
       organiser: "IEEE Rwanda Young Professionals, with the PES/IAS/PELS Joint Chapter and SIGHT Group",
-      summary: "In June 2026, Rwanda became the first African country to require battery-swapping interoperability. Panellists from government, e-mobility, charging infrastructure and finance discuss what it means in practice and how investment can support the transition, followed by Q&A and networking. Open to students, engineers and professionals.",
-      registerUrl: "https://lnkd.in/dfx5kXuR",
+      summary: "In June 2026, Rwanda became the first African country to require battery-swapping interoperability for electric motorcycles. Panelists from Rwanda Green Fund, Spiro and Carnegie Mellon University Africa discussed what the mandate means in practice for riders, operators and investors, and how finance can support the transition. The evening also introduced IEEE Young Professionals and the benefits of membership for early-career engineers, and closed with Q&A, coffee and networking.",
     },
     {
       title: "Women in STEM Leadership and Career Development Forum",
